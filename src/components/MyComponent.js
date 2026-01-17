@@ -11,12 +11,17 @@ class MyComponent extends React.Component {
         age: 21
     };
 
+    handleClick() {
+        console.log("click me my buttoon")
+    }
+
 
     //JSX
     render() {
         return (
             <div>
                 My name is {this.state.name}
+                <button onClick={this.handleClick}> lick me </button>
 
             </div>
         );
