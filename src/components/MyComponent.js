@@ -9,9 +9,9 @@ class MyComponent extends React.Component {
 
     state = {
         listUsers: [
-            { id: 1, name: "Hoidanit", age: "30" },
+            { id: 1, name: "Hoidanit", age: "16" },
             { id: 2, name: "thoien", age: "26" },
-            { id: 3, name: "dung", age: "45" },
+            { id: 3, name: "dung", age: "69" },
         ]
     }
 
@@ -23,7 +23,7 @@ class MyComponent extends React.Component {
                 <UserInfor></UserInfor>
                 <DisplayInfor
                     listUsers={this.state.listUsers}
-                    user={this.state.listUsers}
+
                 ></DisplayInfor>
             </div>
 
