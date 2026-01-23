@@ -13,6 +13,7 @@ import sidebarBg from '../../assets/bg2.jpg';
 
 import { DiReact } from "react-icons/di";
 import { MdDashboard } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
     return (
@@ -50,6 +51,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
 
                         >
                             Dasboard
+                            <Link to="/admins"></Link>
                         </MenuItem>
 
                     </Menu>
@@ -60,7 +62,9 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
                             icon={<FaGem />}
                             title="Features"
                         >
-                            <MenuItem> Quản lý Users</MenuItem>
+                            <MenuItem> Quản lý Users
+                                <Link to="/admins/manage-users"></Link>
+                            </MenuItem>
                             <MenuItem> Quản lý Bài Quiz</MenuItem>
                             <MenuItem> Quản lý câu hỏi</MenuItem>
                         </SubMenu>
