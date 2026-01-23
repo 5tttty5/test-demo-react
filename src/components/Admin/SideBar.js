@@ -11,6 +11,9 @@ import {
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
 import sidebarBg from '../../assets/bg2.jpg';
 
+import { DiReact } from "react-icons/di";
+import { MdDashboard } from "react-icons/md";
+
 const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
     return (
         <>
@@ -35,6 +38,7 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
                             whiteSpace: 'nowrap',
                         }}
                     >
+                        <DiReact size={'3em'} color={"00bfff"} ></DiReact>
                         Hoi Dan IT
                     </div>
                 </SidebarHeader>
@@ -43,21 +47,22 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
                     <Menu iconShape="circle">
                         <MenuItem
                             icon={<FaTachometerAlt />}
-                            suffix={<span className="badge red">New</span>}
+
                         >
                             Dasboard
                         </MenuItem>
-                        <MenuItem icon={<FaGem />}> Components</MenuItem>
+
                     </Menu>
                     <Menu iconShape="circle">
                         <SubMenu
-                            suffix={<span className="badge yellow">3</span>}
+                            // suffix={<span className="badge yellow">3</span>}
 
-                            icon={<FaRegLaughWink />}
+                            icon={<FaGem />}
+                            title="Features"
                         >
-                            <MenuItem> 1</MenuItem>
-                            <MenuItem> 2</MenuItem>
-                            <MenuItem> 3</MenuItem>
+                            <MenuItem> Quản lý Users</MenuItem>
+                            <MenuItem> Quản lý Bài Quiz</MenuItem>
+                            <MenuItem> Quản lý câu hỏi</MenuItem>
                         </SubMenu>
 
                     </Menu>
@@ -71,14 +76,14 @@ const SideBar = ({ image, collapsed, toggled, handleToggleSidebar }) => {
                         }}
                     >
                         <a
-                            href="https://github.com/azouaoui-med/react-pro-sidebar"
+                            href="https://github.com/5tttty5/test-demo-react"
                             target="_blank"
                             className="sidebar-btn"
                             rel="noopener noreferrer"
                         >
                             <FaGithub />
                             <span style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
-                                ViewSource
+                                Thiện Nguyễn
                             </span>
                         </a>
                     </div>
