@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ModelCreateUser from './ModelCreateUser';
-
+import './ManageUser.scss';
 
 
 const ManageUser = (props) => {
@@ -18,8 +18,9 @@ const ManageUser = (props) => {
                 </div>
                 <div>
                     table ussers
-                    <ModelCreateUser></ModelCreateUser>
+
                 </div>
+                <ModelCreateUser></ModelCreateUser>
             </div>
         </div>
     )
