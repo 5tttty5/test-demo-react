@@ -1,5 +1,17 @@
 .manager-user-container {
-    .user-content {}
+    .user-content {
+        .btn-add-new {
+            button {
+                margin: 15px 0;
+            }
+
+        }
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 20px;
+    }
 }
 
 
