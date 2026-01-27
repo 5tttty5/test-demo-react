@@ -7,10 +7,13 @@ import { FcPlus } from 'react-icons/fc';
 import TableUser from './TableUser';
 import { useEffect, useState } from "react";
 import { getAllUsers } from '../../../services/apiService'
+import ModelUpdateUser from './ModelUpdateUser';
 
 const ManageUser = (props) => {
-
+    const [showModelUpdateUser, setShowModelUpdateUser] = useState(false);
     const [showModelCreateUser, setShowModelCreateUser] = useState(false);
+    const [dataUpdate, setDataUpdate] = useState({});
+
     const [listUsers, setListUsers] = useState([])
     useEffect(() => {
         fetchListUsers();
@@ -24,6 +27,12 @@ const ManageUser = (props) => {
         }
     }
 
+    const handleClickBtnUpdate = (user) => {
+        setShowModelUpdateUser(true);
+        setDataUpdate(user);
+
+    }
+
     return (
         <div className="manage-user-container">
             <div className="title">
@@ -35,13 +44,20 @@ const ManageUser = (props) => {
                     <button className='btn btn-primary' onClick={() => setShowModelCreateUser(true)}><FcPlus></FcPlus> Add new users</button>
                 </div>
                 <div>
-                    <TableUser listUsers={listUsers} />
+                    <TableUser listUsers={listUsers}
+                        handleClickBtnUpdate={handleClickBtnUpdate}
+                    />
 
                 </div>
                 <ModelCreateUser show={showModelCreateUser}
                     setShow={setShowModelCreateUser}
                     fetchListUsers={fetchListUsers}
                 ></ModelCreateUser>
+                <ModelUpdateUser
+                    show={showModelUpdateUser}
+                    setShow={setShowModelUpdateUser}
+                    dataUpdate={dataUpdate}
+                />
             </div>
         </div>
     )
